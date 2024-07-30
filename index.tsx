@@ -4,10 +4,10 @@ import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
 
 const { Title } = Typography;
 
-const Operations = (props: any) => {
+const App = (props: any) => {
   const [form] = Form.useForm();
-  let initialValues: any = props.childData;
-  // let initialValues:any= { name: 'John Doe', age: 30, address: { street: '123 Main St', city: 'Anytown', details: { apt: '5A', zip: '12345' } }, phones: ['123-456-7890', '098-765-4321'], emails: ['john@example.com', 'doe@example.com'], nestedArray: [ { "key1": 'value1', key2: 'value2',key3:[{a:"j"}] }, { key1: 'value3', key2: 'value4' ,key3:[{a:"j"}]} ] }
+  // let initialValues: any = props.childData;
+  let initialValues:any= { name: 'John Doe', age: 30, address: { street: '123 Main St', city: 'Anytown', details: { apt: '5A', zip: '12345' } }, phones: ['123-456-7890', '098-765-4321'], emails: ['john@example.com', 'doe@example.com'], nestedArray: [ { "key1": 'value1', key2: 'value2',key3:[{key5:"value5"}] }, { key1: 'value3', key2: 'value4' ,key3:[{key6:"value6"}]} ] }
   useEffect(() => {
     if (initialValues) {
       form.setFieldsValue(initialValues);
@@ -101,5 +101,5 @@ const Operations = (props: any) => {
   );
 };
 
-export default Operations;
+export default App;
 
